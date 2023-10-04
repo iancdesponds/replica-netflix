@@ -27,6 +27,10 @@
     /* Peso bold */
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #000;
     font-family: 'NetflixSans-Regular', sans-serif;
@@ -36,10 +40,11 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     color: #fff;
+
 }
 
 header {
-    z-index: 999;
+    /* z-index: 999; */
     position: absolute;
     height: fit-content;
     width: 100%;
@@ -48,6 +53,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5rem
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 .logo {
@@ -114,6 +124,7 @@ p {
     color: rgba(255, 255, 255, 0.7);
 
 }
+
 .menu-user img:hover {
     cursor: pointer;
 }
@@ -137,7 +148,7 @@ p {
 }
 
 .banner-info {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -160,7 +171,7 @@ p {
     font-weight: 300;
     margin-top: 10px;
     max-width: 500px;
-    width: 100%;
+    width: 100vw;
     padding-top: 5px;
 }
 
@@ -218,4 +229,48 @@ p {
 
 i {
     margin-right: 10px;
+}
+
+.categoria {
+    height: 200px;
+    margin-top: 120px;
+}
+
+.categoria__minha-lista {
+    margin-top: 120px;
+}
+
+.categoria__titulo {
+    color: #e5e5e5e5;
+    font-size: 18px;
+    line-height: 17px;
+    font-weight: 600;
+}
+
+section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+    gap: 0.5rem;
+}
+
+.item {
+    padding: 0 2px;
+    transition: 250ms all;
+}
+
+.item img {
+    max-width: 100%;
+    /* padding-right: 5px; */
+    margin-bottom: 7.5px;
+}
+
+.item img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    border: #fff solid 1px;
+    transition: ease 0.2s;
+    margin-bottom: 0;
 }
