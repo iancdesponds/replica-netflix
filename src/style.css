@@ -263,14 +263,12 @@ section {
 
 .item img {
     max-width: 100%;
-    /* padding-right: 5px; */
     margin-bottom: 7.5px;
+    transition: 250ms ease;
 }
 
 .item img:hover {
     cursor: pointer;
     transform: scale(1.1);
-    border: #fff solid 1px;
-    transition: ease 0.2s;
     margin-bottom: 0;
 }
